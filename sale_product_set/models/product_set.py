@@ -14,12 +14,12 @@ class ProductSet(models.Model):
         string="Internal Reference", help="Product set internal reference", copy=False
     )
     set_line_ids = fields.One2many(
-        "product.set.line", "product_set_id", string="Products"
+        "product.set.line", "product_set_id", string="Products", copy=True
     )
     company_id = fields.Many2one(
         "res.company",
         "Company",
-        default=lambda self: self.env.user.company_id,
+        default=lambda self: self.env.company,
         ondelete="cascade",
     )
     partner_id = fields.Many2one(

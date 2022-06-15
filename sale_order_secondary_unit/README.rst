@@ -7,9 +7,9 @@ Sale Order Secondary Unit
    !! changes will be overwritten.                   !!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-.. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
+.. |badge1| image:: https://img.shields.io/badge/maturity-Production%2FStable-green.png
     :target: https://odoo-community.org/page/development-status
-    :alt: Beta
+    :alt: Production/Stable
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
@@ -32,6 +32,14 @@ secondary unit of distinct category.
 
 .. contents::
    :local:
+
+Configuration
+=============
+
+To configure this module, you need to:
+
+#. Go to *Sales > Configuration > Products > Secondary Units of Measure*
+   to manage all the 'Secondary Units of Measure' in the system.
 
 Usage
 =====
@@ -65,9 +73,13 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 
-* Carlos Dauden <carlos.dauden@tecnativa.com>
-* Sergio Teruel <sergio.teruel@tecnativa.com>
 * Tony Gu <tony@openerp.cn>
+* `Tecnativa <https://www.tecnativa.com>`_:
+
+  * Carlos Dauden
+  * Sergio Teruel
+  * Ernesto Tejeda
+  * Pedro M. Baeza
 
 Maintainers
 ~~~~~~~~~~~
