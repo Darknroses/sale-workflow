@@ -31,10 +31,27 @@ It is based on recent delivered products, and allows the salesman to quickly
 know the most sold products for current customer, which results in an easy to
 use hint to improve sale.
 
+If you want a better mobile usability, the module is ready to use with the
+'web_widget_numeric_step' module. Just install it and you will get a better
+numeric input experience.
+
 **Table of contents**
 
 .. contents::
    :local:
+
+Configuration
+=============
+
+To configure this module you need to:
+
+In sale order product recommendation you can display the product price unit
+from list price or from last sale order price. To set the default value follow
+the next steps
+
+#. Go to *Sales > Configuration > Settings > Quotations & Orders*.
+#. Assign the desired value to *Product recommendation price origin* field.
+#. Press *Save* button to store the change.
 
 Usage
 =====
@@ -72,6 +89,9 @@ Contributors
 
   * Jairo Llopis <jairo.llopis@tecnativa.com>
   * David Vidal <david.vidal@tecnativa.com>
+  * Pedro M. Baeza
+  * Sergio Teruel
+  * Víctor Martínez
 
 Maintainers
 ~~~~~~~~~~~

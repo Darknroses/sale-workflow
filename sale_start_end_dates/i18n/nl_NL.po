@@ -33,9 +33,6 @@ msgstr "Standaard Startdatum"
 #. module: sale_start_end_dates
 #: code:addons/sale_start_end_dates/models/sale_order.py:21
 #, fuzzy, python-format
-#| msgid ""
-#| "Default Start Date should be before or be the same as Default End Date "
-#| "for sale order %s"
 msgid ""
 "Default Start Date should be before or be the same as Default End Date for "
 "sale order '%s'."
@@ -58,13 +55,13 @@ msgstr ""
 "invoeren op de factuurregels die dit product bevatten."
 
 #. module: sale_start_end_dates
-#: code:addons/sale_start_end_dates/models/sale_order.py:86
+#: code:addons/sale_start_end_dates/models/sale_order.py:87
 #, python-format
 msgid "Missing End Date for sale order line with Product '%s'."
 msgstr "Ontbrekende einddatum voor verkooporderregel met product '%s'."
 
 #. module: sale_start_end_dates
-#: code:addons/sale_start_end_dates/models/sale_order.py:90
+#: code:addons/sale_start_end_dates/models/sale_order.py:91
 #, python-format
 msgid "Missing Start Date for sale order line with Product '%s'."
 msgstr "Ontbrekende begindatum voor verkooporderregel met product '%s'."
@@ -82,9 +79,6 @@ msgstr "Aantal dagen"
 #. module: sale_start_end_dates
 #: code:addons/sale_start_end_dates/models/sale_order.py:68
 #, fuzzy, python-format
-#| msgid ""
-#| "On sale order line with Product '%s', the number of days is negative ; "
-#| "this is not allowed."
 msgid ""
 "On sale order line with product '%s', the number of days is negative (%d) ; "
 "this is not allowed. The number of days has been forced to 1."
@@ -95,7 +89,6 @@ msgstr ""
 #. module: sale_start_end_dates
 #: model:ir.model,name:sale_start_end_dates.model_sale_order
 #, fuzzy
-#| msgid "Sales Order"
 msgid "Sale Order"
 msgstr "Verkooporder"
 
@@ -110,7 +103,7 @@ msgid "Start Date"
 msgstr "Startdatum"
 
 #. module: sale_start_end_dates
-#: code:addons/sale_start_end_dates/models/sale_order.py:94
+#: code:addons/sale_start_end_dates/models/sale_order.py:95
 #, python-format
 msgid ""
 "Start Date should be before or be the same as End Date for sale order line "
@@ -122,7 +115,6 @@ msgstr ""
 #. module: sale_start_end_dates
 #: code:addons/sale_start_end_dates/models/sale_order.py:67
 #, fuzzy, python-format
-#| msgid "Number of Days"
 msgid "Wrong number of days"
 msgstr "Aantal dagen"
 

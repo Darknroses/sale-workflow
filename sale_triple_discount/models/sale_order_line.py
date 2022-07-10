@@ -1,11 +1,10 @@
 # Copyright 2015 ADHOC SA  (http://www.adhoc.com.ar)
 # Copyright 2017 - 2019 Alex Comba - Agile Business Group
 # Copyright 2017 Tecnativa - David Vidal
-# Copyright 2018 Simone Rubino - Agile Business Group
+# Copyright 2018 ~ 2021 Simone Rubino - Agile Business Group
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from odoo import api, fields, models
 import odoo.addons.decimal_precision as dp
 
 
@@ -18,10 +17,6 @@ class SaleOrderLine(models.Model):
             return self._additive_discount()
         elif self.discounting_type == "multiplicative":
             return self._multiplicative_discount()
-        else:
-            raise ValidationError(_(
-                "Sale order line %s has unknown discounting type %s"
-            ) % (self.name, self.discounting_type))
 
     def _additive_discount(self):
         self.ensure_one()
@@ -48,9 +43,10 @@ class SaleOrderLine(models.Model):
 
     @api.depends('discount2', 'discount3', 'discounting_type')
     def _compute_amount(self):
-        prev_values = self.triple_discount_preprocess()
-        super(SaleOrderLine, self)._compute_amount()
-        self.triple_discount_postprocess(prev_values)
+        for line in self:
+            prev_values = line.triple_discount_preprocess()
+            super(SaleOrderLine, line)._compute_amount()
+            line.triple_discount_postprocess(prev_values)
 
     discount2 = fields.Float(
         'Disc. 2 (%)',
@@ -110,19 +106,16 @@ class SaleOrderLine(models.Model):
         """Save the values of the discounts in a dictionary,
         to be restored in postprocess.
         Resetting discount2 and discount3 to 0.0 avoids issues if
-        this method is called multiple times.
-        Updating the cache provides consistency through recomputations."""
+        this method is called multiple times."""
         prev_values = dict()
-        self.invalidate_cache(
-            fnames=['discount', 'discount2', 'discount3'],
-            ids=self.ids)
+
         for line in self:
             prev_values[line] = dict(
                 discount=line.discount,
                 discount2=line.discount2,
                 discount3=line.discount3,
             )
-            line._cache.update({
+            line.update({
                 'discount': line._get_final_discount(),
                 'discount2': 0.0,
                 'discount3': 0.0
@@ -131,10 +124,6 @@ class SaleOrderLine(models.Model):
 
     @api.model
     def triple_discount_postprocess(self, prev_values):
-        """Restore the discounts of the lines in the dictionary prev_values.
-        Updating the cache provides consistency through recomputations."""
-        self.invalidate_cache(
-            fnames=['discount', 'discount2', 'discount3'],
-            ids=[l.id for l in list(prev_values.keys())])
+        """Restore the discounts of the lines in the dictionary prev_values."""
         for line, prev_vals_dict in list(prev_values.items()):
-            line._cache.update(prev_vals_dict)
+            line.update(prev_vals_dict)
