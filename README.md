@@ -22,7 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [portal_sale_personal_data_only](portal_sale_personal_data_only/) | 14.0.1.0.0 |  | Portal Sale Personal Data Only
-[pricelist_cache](pricelist_cache/) | 14.0.1.0.1 |  | Provide a new model to cache price lists and update it, to make it easier to retrieve them.
+[pricelist_cache](pricelist_cache/) | 14.0.1.2.0 |  | Provide a new model to cache price lists and update it, to make it easier to retrieve them.
 [pricelist_cache_rest](pricelist_cache_rest/) | 14.0.1.0.0 |  | Provides an endpoint to get product prices for a given customer
 [product_form_sale_link](product_form_sale_link/) | 14.0.1.1.0 |  | Adds a button on product forms to access Sale Lines
 [product_supplierinfo_for_customer_elaboration](product_supplierinfo_for_customer_elaboration/) | 14.0.1.0.0 |  | Allows to define default elaborations and elaboration notes on product customerinfos
@@ -85,13 +85,13 @@ addon | version | maintainers | summary
 [sale_order_lot_selection](sale_order_lot_selection/) | 14.0.1.1.0 | [![bodedra](https://github.com/bodedra.png?size=30px)](https://github.com/bodedra) | Sale Order Lot Selection
 [sale_order_mass_action](sale_order_mass_action/) | 14.0.1.0.0 |  | Allows to easy mass operations on sale orders.
 [sale_order_note_template](sale_order_note_template/) | 14.0.1.0.0 |  | Add sale orders terms and conditions template that can be used to quickly fullfill sale order terms and conditions
-[sale_order_partner_restrict](sale_order_partner_restrict/) | 14.0.1.0.1 | [![OriolVForgeFlow](https://github.com/OriolVForgeFlow.png?size=30px)](https://github.com/OriolVForgeFlow) | Apply restrictions when selecting from the list of customers on SO.
+[sale_order_partner_restrict](sale_order_partner_restrict/) | 14.0.1.1.0 | [![OriolVForgeFlow](https://github.com/OriolVForgeFlow.png?size=30px)](https://github.com/OriolVForgeFlow) | Apply restrictions when selecting from the list of customers on SO.
 [sale_order_price_recalculation](sale_order_price_recalculation/) | 14.0.1.0.0 |  | Recalculate prices / Reset descriptions on sale order lines
 [sale_order_priority](sale_order_priority/) | 14.0.1.0.0 |  | Define priority on sale orders
 [sale_order_product_assortment](sale_order_product_assortment/) | 14.0.1.0.0 | [![CarlosRoca13](https://github.com/CarlosRoca13.png?size=30px)](https://github.com/CarlosRoca13) | Module that allows to use the assortments on sale orders
 [sale_order_qty_change_no_recompute](sale_order_qty_change_no_recompute/) | 14.0.1.0.2 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Prevent recompute if only quantity has changed in sale order line
 [sale_order_report_without_price](sale_order_report_without_price/) | 14.0.1.0.0 |  | Allow you to generate quotation and order reports without price.
-[sale_order_revision](sale_order_revision/) | 14.0.1.1.0 |  | Keep track of revised quotations
+[sale_order_revision](sale_order_revision/) | 14.0.1.1.1 |  | Keep track of revised quotations
 [sale_order_secondary_unit](sale_order_secondary_unit/) | 14.0.1.0.0 |  | Sale product in a secondary unit
 [sale_order_tag](sale_order_tag/) | 14.0.1.0.1 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Adds Tags to Sales Orders.
 [sale_order_type](sale_order_type/) | 14.0.3.0.2 |  | Sale Order Type
@@ -99,7 +99,9 @@ addon | version | maintainers | summary
 [sale_partner_approval](sale_partner_approval/) | 14.0.2.0.0 | [![dreispt](https://github.com/dreispt.png?size=30px)](https://github.com/dreispt) | Control Partners that can be used in Sales Orders
 [sale_partner_incoterm](sale_partner_incoterm/) | 14.0.1.2.0 |  | Set the customer preferred incoterm on each sales order
 [sale_partner_version](sale_partner_version/) | 14.0.2.0.0 |  | Sale Partner Version
+[sale_pricelist_discount_decimal_precision](sale_pricelist_discount_decimal_precision/) | 14.0.1.0.1 |  | Use Discount decimal precision for pricelist items
 [sale_pricelist_from_commitment_date](sale_pricelist_from_commitment_date/) | 14.0.1.0.2 |  | Use sale order commitment date to compute line price from pricelist
+[sale_pricelist_item_advanced](sale_pricelist_item_advanced/) | 14.0.1.0.0 |  | Pricelist items menu
 [sale_procurement_amendment](sale_procurement_amendment/) | 14.0.1.0.0 | [![rousseldenis](https://github.com/rousseldenis.png?size=30px)](https://github.com/rousseldenis) | Allow to reflect confirmed sale lines quantity amendments to procurements
 [sale_procurement_group_by_line](sale_procurement_group_by_line/) | 14.0.1.0.2 |  | Base module for multiple procurement group by Sale order
 [sale_product_brand_exception](sale_product_brand_exception/) | 14.0.1.0.0 |  | Define rules for sale order and brands
